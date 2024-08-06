@@ -1,10 +1,59 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dil ki aawaz</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+        .shayari {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        #shayari-1 {
+            background: url('images/background1.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-2 {
+            background: url('images/background2.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-3 {
+            background: url('images/background3.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-4 {
+            background: url('images/background4.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-5 {
+            background: url('images/background5.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-6 {
+            background: url('images/background6.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-7 {
+            background: url('images/background7.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>Welcome to the World of Priya Vats</h1>
@@ -22,8 +71,10 @@
                     पर तुम मेरे पास हमेशा रहोगे।<br>
                     मैं तुम्हारी अपनी रहूँ या ना रहूँ।<br>
                     तुम मेरे अपनों में हमेशा रहोगे।</p>
-                <img src="images/shayari1.jpg" alt="Shayari 1 Image">
+                <img src="images/shayari1.jpg" alt="Shayari 1 Image" crossorigin="anonymous">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-1')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-1')">Download on Solid Background</button>
         </section>
 
         <section id="shayari-2" class="shayari">
@@ -42,66 +93,77 @@
                     मंज़िलों को पाने का शोख कहाँ कम होगा।</p>
                 <img src="images/shayari2.jpg" alt="Shayari 2 Image">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-2')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-2')">Download on Solid Background</button>
         </section>
-<section id="shayari-3" class="shayari">
+
+        <section id="shayari-3" class="shayari">
             <h2>Ankahi Baten Aur Adhoori Samajh</h2>
             <div class="shayari-content">
                 <p>एक दिन तेरे जाने का ग़म इतना न था <br>
-जितना आज तेरे ऐसा आने से हो गया।
-<br>
-तू तब भी जुड़ा ही था, आज भी दूर नहीं है।
-<br>
-बात तब भी दिल से थी, बात आज भी दिल की है।<br>
-
-तब तू उसे समझ न पाया था और आज मैं इसे संभाल ना पाई।</p>
-                    
+                    जितना आज तेरे ऐसा आने से हो गया।<br>
+                    तू तब भी जुड़ा ही था, आज भी दूर नहीं है।<br>
+                    बात तब भी दिल से थी, बात आज भी दिल की है।<br>
+                    तब तू उसे समझ न पाया था और आज मैं इसे संभाल ना पाई।</p>
                 <img src="images/shayari3.jpg" alt="Shayari 3 Image">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-3')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-3')">Download on Solid Background</button>
         </section>
-<section id="shayari-4" class="shayari">
+
+    
+        <section id="shayari-4" class="shayari">
             <h2>Barsaat Ki Talash Mein</h2>
             <div class="shayari-content">
                 <p>अकेले अकेले हँसता रहा, धीरे धीरे बस्ता रहा।<br>
-अंजानी सी एक दुनिया में सबकी राह ताकता रहा,<br>
- नई नई गलियों में सुबह शाम भटकता रहा।<br>
- खाली एक मुस्कान को हमेशा मैं तरसता रहा। <br>
-नए जमाने में उलझता गया, नए मौसम से सुलझता रहा।<br>
- सबकी ज़ुबान पढ़ता रहा, अपनी अपनी करता रहा। <br>
-हवाओं का रुख बदलता रहा, मेरा दुख भी जलता रहा।<br>
- सावन नया आता रहा, मेरा ग़म सुलगता गया।<br>
- बस एक प्यास है जिसकी, हुई नहीं बरसात है। <br>
-जब वो बरसेगा, तब जमाना मेरे लिए तरसेगा। <br>
-वो बरसात भी होगी जरूर, बस डर है मैं न हो जाऊं मग़रूर।</p>
-                    
+                    अंजानी सी एक दुनिया में सबकी राह ताकता रहा,<br>
+                    नई नई गलियों में सुबह शाम भटकता रहा।<br>
+                    खाली एक मुस्कान को हमेशा मैं तरसता रहा।<br>
+                    नए जमाने में उलझता गया, नए मौसम से सुलझता रहा।<br>
+                    सबकी ज़ुबान पढ़ता रहा, अपनी अपनी करता रहा।<br>
+                    हवाओं का रुख बदलता रहा, मेरा दुख भी जलता रहा।<br>
+                    सावन नया आता रहा, मेरा ग़म सुलगता गया।<br>
+                    बस एक प्यास है जिसकी, हुई नहीं बरसात है।<br>
+                    जब वो बरसेगा, तब जमाना मेरे लिए तरसेगा।<br>
+                    वो बरसात भी होगी जरूर, बस डर है मैं न हो जाऊं मग़रूर।</p>
                 <img src="images/shayari4.jpg" alt="Shayari 4 Image">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-4')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-4')">Download on Solid Background</button>
         </section>
-<section id="shayari-5" class="shayari">
+
+        <section id="shayari-5" class="shayari">
             <h2>Dil ki Ankahin Baatein</h2>
             <div class="shayari-content">
-                <p>मुसाफ़िरों से दिल लगाया नहीं करते।<br> 
-दिल की बेचैनी को दिखाया नहीं करते।<br>   
-सावन की लगी आग बुझाया नहीं करते।<br>   
-चाँद भँवरे के पास आ जाने से फूलों पे कलंक लगाया नहीं करते। <br>  
-जाड़ों की जलन को बर्फ से सुलगाया नहीं करते।<br>   
-प्यार की अगन को हमेशा आँसुओं से बुझाया नहीं करते।</p> 
-<img src="images/shayari5.jpg" alt="Shayari 5 Image">
+                <p>मुसाफ़िरों से दिल लगाया नहीं करते।<br>
+                    दिल की बेचैनी को दिखाया नहीं करते।<br>
+                    सावन की लगी आग बुझाया नहीं करते।<br>
+                    चाँद भँवरे के पास आ जाने से फूलों पे कलंक लगाया नहीं करते।<br>
+                    जाड़ों की जलन को बर्फ से सुलगाया नहीं करते।<br>
+                    प्यार की अगन को हमेशा आँसुओं से बुझाया नहीं करते।</p>
+                <img src="images/shayari5.jpg" alt="Shayari 5 Image">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-5')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-5')">Download on Solid Background</button>
         </section>
-<section id="shayari-6" class="shayari">
+
+        <section id="shayari-6" class="shayari">
             <h2>Pyar ke Usool</h2>
             <div class="shayari-content">
                 <p>कहने को सब का प्यार है <br> 
-करना बस इंतज़ार है <br> 
-छन भर आ बैठो तो फिर सुंदरता बेकार है <br> 
-कह देना आसान है, तू मेरी जान है <br> 
-लड़ना भले फिजूल है, कहना इसे प्यार का उसूल है <br> 
-मेरे कान्हा भी बदनाम हैं क्योंकि राधा उनके नाम हैं  <br>
-हर लड़का कृष्ण है यहाँ का, कई हैं उनकी राधा <br> 
-ना जाने ये कौन सा संगम मोह भी जिसमें आधा</p>
-<img src="images/shayari6.jpg" alt="Shayari 6 Image">
+                    करना बस इंतज़ार है <br> 
+                    छन भर आ बैठो तो फिर सुंदरता बेकार है <br> 
+                    कह देना आसान है, तू मेरी जान है <br> 
+                    लड़ना भले फिजूल है, कहना इसे प्यार का उसूल है <br> 
+                    मेरे कान्हा भी बदनाम हैं क्योंकि राधा उनके नाम हैं <br>
+                    हर लड़का कृष्ण है यहाँ का, कई हैं उनकी राधा <br> 
+                    ना जाने ये कौन सा संगम मोह भी जिसमें आधा</p>
+                <img src="images/shayari6.jpg" alt="Shayari 6 Image">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-6')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-6')">Download on Solid Background</button>
         </section>
+
         <section id="shayari-7" class="shayari">
             <h2>Duri aur Dar</h2>
             <div class="shayari-content">
@@ -112,8 +174,10 @@
                     डर अगर जाने का होता तो क्या बात थी, डर तो लौट के न आने का है।<br>
                     बात अगर उस पत्थर की होती तो क्या बात थी, बात तो पत्थर में बसे उस भगवान की है।<br>
                     बात बस इस सोच की होती तो क्या बात थी, बात तो दिल की है।</p>
-<img src="images/shayari7.jpg" alt="Shayari 7 Image">
+                <img src="images/shayari7.jpg" alt="Shayari 7 Image" crossorigin="anonymous">
             </div>
+            <button class="download-btn" onclick="downloadShayari('shayari-7')">Download</button>
+            <button class="download-btn" onclick="downloadShayariOnBackground('shayari-7')">Download on Solid Background</button>
         </section>
     </main>
 
@@ -122,14 +186,16 @@
             <ul>
                 <li><a href="#shayari-1">1</a></li>
                 <li><a href="#shayari-2">2</a></li>
-<li><a href="#shayari-3">3</a></li>
-<li><a href="#shayari-4">4</a></li>
-<li><a href="#shayari-5">5</a></li>
-<li><a href="#shayari-6">6</a></li>
-<li><a href="#shayari-7">7</a></li>
-                
+                <li><a href="#shayari-3">3</a></li>
+                <li><a href="#shayari-4">4</a></li>
+                <li><a href="#shayari-5">5</a></li>
+                <li><a href="#shayari-6">6</a></li>
+                <li><a href="#shayari-7">7</a></li>
             </ul>
         </nav>
     </footer>
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
