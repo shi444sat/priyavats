@@ -91,50 +91,6 @@ if (!room) {
       chatArea.scrollTop = chatArea.scrollHeight;
     });
 
-    socket.on('image', ({ data, username }) => {
-      const msg = document.createElement('div');
-      msg.classList.add('message');
-
-      if (username === currentUserUsername) {
-        msg.classList.add('self');
-      }
-
-      const msgwrapper = document.createElement('div');
-      msgwrapper.classList.add('message-wrapper');
-
-      const msgContent = document.createElement('div');
-      msgContent.classList.add('message-content');
-
-      const h6 = document.createElement('h6');
-      h6.textContent = 'sender: ' + username;
-
-      msgContent.appendChild(h6);
-
-      const form_row = document.createElement('div');
-      form_row.classList.add('form-row');
-
-      const col = document.createElement('div');
-      col.classList.add('col');
-
-      const popup_media = document.createElement('a');
-      popup_media.classList.add('popup-media');
-      popup_media.href = data;
-
-      const imgElement = document.createElement('img');
-      imgElement.classList.add('img-fluid', 'rounded');
-      imgElement.src = data;
-
-      popup_media.appendChild(imgElement);
-      col.appendChild(popup_media);
-      form_row.appendChild(col);
-      msgContent.appendChild(form_row);
-      msgwrapper.appendChild(msgContent);
-      msg.appendChild(msgwrapper);
-
-      document.getElementById('chat-msg-load').appendChild(msg);
-      document.getElementById('msgsound').play();
-    });
-
     socket.on('join', (message) => {
       const msgDay = document.createElement('div');
       msgDay.classList.add('message-day');
