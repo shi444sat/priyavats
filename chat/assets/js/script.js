@@ -148,28 +148,6 @@ if (!room) {
       }
     }
 
-    const fileinp = document.getElementById('fileinp');
-    const image = document.getElementById('imageinp');
-
-    image.addEventListener('click', () => {
-      fileinp.click();
-    });
-
-    fileinp.addEventListener('change', () => {
-      const file = fileinp.files[0];
-      if (file) {
-        if (file.size > 3 * 1024 * 1024) {
-          alert('File size exceeds 3 MB. Please select a smaller file.');
-          return;
-        }
-        const reader = new FileReader();
-        reader.onload = () => {
-          socket.emit('image', { room, data: reader.result, username });
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
     socket.on('disconnect', () => {
       alert('Disconnected From Server. Reconnecting...');
       window.location.reload();
