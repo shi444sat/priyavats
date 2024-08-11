@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io('https://suhanishivesh.onrender.com');
 const userList = document.querySelector('.contacts-list');
 
 let currentUserUsername; // Variable to store the current user's username
