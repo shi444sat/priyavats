@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Check if the current URL contains the query parameter "text"
   const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("love")) {
+  if (urlParams.has("shyari")) {
     window.location.href = 'https://priyavats.onrender.com/?room=1205';
   }
 });
