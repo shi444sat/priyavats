@@ -6,8 +6,9 @@ body {
     background-color: #f0f0f0;
     position: relative; /* Ensure relative positioning for footer's absolute position */
 }
+
 header {
-    background-color: #DB10BC;
+    background-color: #ee1111;
     color: white;
     padding: 0px;
     width: 100%;
@@ -26,6 +27,7 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
 .shayari {
     max-width: 600px;
     margin-bottom: 20px;
@@ -82,14 +84,7 @@ footer ul li a:hover {
     justify-content: center
 }
 
-.typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 7s steps(30, end) infinite, blink-caret .5s step-end infinite
-}
+
 
 @keyframes typing {
     from {
@@ -111,4 +106,93 @@ footer ul li a:hover {
     50% {
         border-color: orange
     }
+}
+#load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .shayari {
+    position: relative;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url("images/bg/bgp.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .download-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .download-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+ /* Styles for Dark Mode */
+body.dark-mode {
+  background-color: #1d1b1b;
+  color: #ffffff;
+}
+
+.navbar.dark-mode {
+  background-color: #222;
+}
+
+.toggle-btn {
+  background-color: #333;
+  color: #f2f2f2;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+/* Adjust styles for dark mode toggle button inside navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar.responsive .navbar-right {
+    flex-direction: column;
+  }
+  .navbar.responsive .navbar-right a {
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+  .navbar.responsive .toggle-btn {
+    margin: 10px 0;
+  }
 }
