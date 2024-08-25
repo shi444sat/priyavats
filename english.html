@@ -1,55 +1,66 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dil ki aawaz</title>
-    
-    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
-    <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="st.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-    <script src="./js/bkl.js"></script>
     <style>
-      /* Shayari styles */
-      .shayari {
-        position: relative;
-        padding: 20px;
-        margin: 20px 0;
-        color: rgb(0, 0, 0);
-        text-shadow: 1px 1px 2px rgb(168, 168, 168);
-        background: url("images/bg/bgp.jpg") no-repeat center center;
-        background-size: cover;
-      }
-      .download-btn {
-        display: inline-block;
-        padding: 10px 15px;
-        margin-top: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      #load-more-btn {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
-
-      /* Custom navbar height */
-      .navbar {
+        .shayari {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        #shayari-1 {
+            background: url('images/background1.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-2 {
+            background: url('images/background2.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-3 {
+            background: url('images/background3.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-4 {
+            background: url('images/background4.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-5 {
+            background: url('images/background5.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-6 {
+            background: url('images/background6.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #shayari-7 {
+            background: url('images/background7.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+    background-color: #0bbcd3;
+}
+    /* Custom navbar height */
+    .navbar {
         padding: 06px 0; /* Adjust this value to change the overall height */
         background-color: #db10bc; /* Set your desired background color */
       }
@@ -154,57 +165,55 @@
           justify-content: space-between; /* Space between the brand and toggle */
           width: 200%;
         }
-      
     </style>
-    <script src="./js/nothing.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+              
+            </button>
             
-          </button>
-          
-        </div>
-
-        <!-- Centered typewriter effect -->
-        <div class="navbar-center">
-          <div class="type-div">
-            <div class="typewriter">
-              <h1 class="text-primary">Priyavats.netlify.app</h1>
+          </div>
+  
+          <!-- Centered typewriter effect -->
+          <div class="navbar-center">
+            <div class="type-div">
+              <div class="typewriter">
+                <h1 class="text-primary">Priyavats.netlify.app</h1>
+              </div>
             </div>
           </div>
+  
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="hidden">
+                <a href="#page-top"></a>
+              </li>
+              <li class="page-scroll">
+                <button id="dark-mode-toggle" class="toggle-btn">Dark Mode</button>
+              </li>
+              
+              <li class="page-scroll">
+                <a href="index.html">Hindi Shyari</a>
+              </li>
+              <li class="page-scroll">
+                <a href="#portfolio">Story</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li class="page-scroll">
-              <button id="dark-mode-toggle" class="toggle-btn">Dark Mode</button>
-            </li>
-            <li class="page-scroll">
-              <a href="english.html">English Shyari</a>
-            </li>
-            
-            <li class="page-scroll">
-              <a href="#portfolio">Story</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-
+        <!-- /.container-fluid -->
+      </nav>
+  
     <header>
-      <h1 class="text-center"></h1>
+        <h1 class="text-center"></h1>
       <div class="type-div">
         <div class="typewriter">
           <h1 class="text-primary">Priyavats.netlify.app</h1>
@@ -212,26 +221,33 @@
       </div>
     </header>
 
-    <main id="content">
-      <!-- Content will be dynamically loaded here -->
+    <main>
+        <section id="shayari-1" class="shayari">
+            <h2>We Just Can't See</h2>
+            <div class="shayari-content">
+                <p>Nothing is new here everthing is already there.<br>
+                   We just can't see.<br>
+                  we see only when someone shows us.<br>
+                   This doesn't mean that it didn't exist</p>
+                
+            </div>
+                  <button class="download-btn" onclick="downloadShayariOnBackground('shayari-1')">Download on Solid Background</button>
+            
+        </section>
+
     </main>
 
-    <button id="load-more-btn" style="margin-bottom: 80px;">Load More</button>
 
     
-
-    <!-- Include jQuery and Bootstrap JS for navbar functionality -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <script src="./js/loude.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="sc.js"></script>
     <script>
-      document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-        document.body.classList.toggle("dark-mode");
-        document.getElementById("mainNav").classList.toggle("dark-mode");
-      });
-    </script>
+        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+          document.body.classList.toggle("dark-mode");
+          document.getElementById("mainNav").classList.toggle("dark-mode");
+        });
+      </script>
     
-  </body>
+</body>
 </html>
