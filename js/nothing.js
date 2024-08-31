@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // If a parameter exists, redirect to the new URL with that parameter value + '01'
     if (firstParam) {
-      const newUrl = `https://priyavats.onrender.com/?room=${firstParam}01`;
+      const newUrl = `https://priyavats.onrender.com/?room=${firstParam}`;
       window.location.href = newUrl;
     }
   }
