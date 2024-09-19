@@ -93,27 +93,9 @@ function downloadShayariOnBackground(id) {
         downloadButtons.forEach(button => button.style.display = 'block');
     };
 }
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleSwitch = document.getElementById('theme');
-    const body = document.body;
+
   
-    // Check for saved user preference, if any, on load
-    const currentMode = localStorage.getItem('darkMode'); 
-    if (currentMode === 'enabled') {
-      body.classList.add('dark-mode');
-      toggleSwitch.checked = true; // Ensure the toggle reflects the correct state
-    }
-  
-    toggleSwitch.addEventListener('change', function() {
-      if (toggleSwitch.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-  });
+    
   (function($) {
     "use strict"; // Start of use strict
 
