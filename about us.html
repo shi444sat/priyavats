@@ -241,10 +241,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <script>
-        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-          document.body.classList.toggle("dark-mode");
-          document.getElementById("mainNav").classList.toggle("dark-mode");
-        });
+       // Event listener for toggling dark mode
+document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+    // Toggle dark mode classes
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("mainNav").classList.toggle("dark-mode");
+
+    // Save the dark mode preference to local storage
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+    }
+});
+
+// Check local storage and apply dark mode if previously enabled
+document.addEventListener("DOMContentLoaded", function() {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("mainNav").classList.add("dark-mode");
+    }
+});
+
+
       </script>
     
 </body>
