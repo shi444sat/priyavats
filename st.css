@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
     position: relative; /* Ensure relative positioning for footer's absolute position */
+    background-color: #2b1717
 }
 
 header {
@@ -20,12 +21,13 @@ header {
 }
 
 main {
-    flex: 1;
-    padding: 70px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex: 1;
+  margin-top: 100px;
+  padding: 0px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .shayari {

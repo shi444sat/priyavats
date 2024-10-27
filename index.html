@@ -18,6 +18,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="./js/bkl.js"></script>
     <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b1717;
+    color: #333;
+    padding: 10px;
+}
       /* Shayari styles */
       .shayari {
         position: relative;
@@ -58,7 +65,9 @@
         padding: 5px 15px; /* Adjust this value to change the height of the brand area */
         color: #ec1212; /* Set the brand text color */
       }
-
+      .navbar-default .navbar-nav>li>a  {
+        color: #FFFFF0;
+      }
       .navbar-nav > li > a {
         padding-top: 10px;  /* Adjust these values to control height */
         padding-bottom: 10px;
@@ -194,6 +203,9 @@
             </li>
             <li class="page-scroll">
               <button id="dark-mode-toggle" class="toggle-btn">Dark Mode</button>
+            </li>
+            <li class="page-scroll">
+              <a href="poetry.html">Poetry</a>
             </li>
             <li class="page-scroll">
               <a href="english.html">English </a>
