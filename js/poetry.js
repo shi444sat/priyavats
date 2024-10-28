@@ -1,6 +1,6 @@
 const PAGE_SIZE = 10;
 let lastVisible = null;
-const contentRef = db.collection("Poetry").orderBy("createdAt", "desc");
+const contentRef = db.collection("Poetry").orderBy("createdAt", "asc");
 const contentContainer = document.getElementById("Poetry1");
 
 function loadShayari(isInitialLoad = true) {
