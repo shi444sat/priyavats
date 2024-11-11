@@ -6,7 +6,7 @@ body {
     background-color: #f0f0f0;
     position: relative; /* Ensure relative positioning for footer's absolute position */
 }
-
+ 
 header {
     background-color: #ee1111;
     color: white;
@@ -27,58 +27,44 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
-.shayari {
-    max-width: 600px;
-    margin-bottom: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    position: relative; /* Ensure relative positioning for footer's absolute position */
-}
-.shayari-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shayari img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-}
+/* Footer styling */
 footer {
-    background-color: #DB10BC;
-    color: white;
-    text-align: center;
-    padding: 0px;
-    width: 100%;
-    position: fixed; /* Fix the footer at the bottom of the viewport */
-    bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0px 0;
+  background-color: #db10bc;
+  color: #ffffff;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
 }
-footer nav {
-    text-align: center;
+
+
+footer p {
+  margin: 5px 0;
+  line-height: 1.5;
 }
-footer ul {
-    list-style-type: none;
-    padding: 0;
+
+.heart {
+  color: rgb(0, 26, 255); 
 }
-footer ul li {
-    display: inline-block;
-    margin-right: 10px;
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
 }
-footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+
+.dark-mode footer {
+  background-color: #333;
+  color: #f9f9f9;
 }
-footer ul li a:hover {
-    background-color: #555;
+
+.dark-mode footer a {
+  color: #f9f9f9;
 }
+
 .type-div {
     display: flex;
     justify-content: center
@@ -108,43 +94,7 @@ footer ul li a:hover {
     }
 }
 
-  .shayari {
-    position: relative;
-    padding: 20px;
-    margin: 20px 0;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    background: url("images/bg/bgp.jpg") no-repeat center center;
-    background-size: cover;
-  }
-  .download-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .download-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  #load-more-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
+  
  /* Styles for Dark Mode */
 body.dark-mode {
   background-color: #1d1b1b;
@@ -301,7 +251,7 @@ h1 {
 p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #555;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -314,7 +264,8 @@ p {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
+
 

@@ -1,3 +1,5 @@
+
+
 /* Center the card using Flexbox */
 .outer {
     width: 300px;
@@ -14,6 +16,52 @@
     align-items: center; /* Center content vertically */
   }
   
+/* General styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should expand to fill available space */
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+
+/* Footer styling */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 0px 0;
+  background-color: #db10bc;
+  color: #ffffff;
+  font-size: 16px;
+  position: fixed; /* Stick it to the bottom of the viewport */
+  bottom: 0; /* Aligns it to the bottom */
+  left: 0; /* Ensures it starts from the left edge */
+}
+footer p {
+  margin: 8px 0;
+}
+.heart {
+  color: rgb(0, 26, 255);
+}
+footer a {
+  color: #506b4b;
+  text-decoration: none;
+}
+.dark-mode footer {
+  background-color: #333;
+  color: #f9f9f9;
+
+
+
+}
+
   .dot {
     width: 5px;
     aspect-ratio: 1;
@@ -212,3 +260,5 @@ body.dark-mode {
   --rotate-bar-one: 45deg;
   --rotate-bar-three: -45deg;
 }
+
+
