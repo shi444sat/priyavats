@@ -256,6 +256,22 @@ body {
     <script src="./js/loude.js"></script>
     <script src="./js/script.js"></script>
     <script>
+
+         // Create the observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      loadShayari(false); // Load more content when "Load More" button is in view
+    }
+  });
+}, {
+  root: null, // Uses the viewport as root
+  threshold: 0.5 // Trigger when 50% of the button is visible
+});
+
+// Attach observer to the "Load More" button
+const loadMoreButton = document.getElementById("load-more-btn");
+observer.observe(loadMoreButton);
     // Event listener for toggling dark mode
 document.getElementById("dark-mode-toggle").addEventListener("click", function() {
     // Toggle dark mode classes
