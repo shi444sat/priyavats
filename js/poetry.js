@@ -32,7 +32,7 @@ function loadShayari(isInitialLoad = true) {
         sectionElement.innerHTML = `
                   <h2>${data.title}</h2>
                   <div class="shayari-content"><p>${data.shayri}</p></div>
-                  
+                  <button class="download-btn" onclick="downloadShayari('${data.id}')">Download</button>
                   <button class="download-btn" onclick="downloadShayariOnBackground('${data.id}')">Download on Solid Background</button>
               `;
         contentContainer.appendChild(sectionElement);
